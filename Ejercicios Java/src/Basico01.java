@@ -1,5 +1,3 @@
-import javax.sound.sampled.SourceDataLine;
-
 /**
  * @author Christian Novo Sacramento
  */

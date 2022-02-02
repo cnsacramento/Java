@@ -21,7 +21,7 @@ C toma el valor de A -> C = 1
 A toma el valor de D -> A = 4
 D toma el valor de B -> D = 2                                                                                     
 */
-public class Basico4 {
+public class Basico04 {
     
     public static void main(String[] args) {
         
