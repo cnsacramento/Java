@@ -11,7 +11,7 @@ public class Basico21 {
     public static void main(String[] args) {
         
         Scanner sc = new Scanner(System.in);
-        int precioUnidad, productosVendidos;
+        double precioUnidad, productosVendidos;
         double iva;
 
         //Se solicitan los datos
@@ -27,7 +27,7 @@ public class Basico21 {
         double precioVentaConIva = (precioUnidad * productosVendidos) + ivaPrecioVenta;
 
         //Se muestra el resultado
-        System.out.println();
+        System.out.println(); //Para hacer un salto de línea y que no aparezca junto
         System.out.println("FACTURA");
         System.out.println("=======");
         System.out.println("El total del iva aplicado es: " + ivaPrecioVenta);
