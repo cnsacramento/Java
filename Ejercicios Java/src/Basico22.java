@@ -20,7 +20,7 @@ public class Basico22 {
         m = sc.nextInt();
 
         //Se le quitan las cifras a n
-        n /= Math.pow(10, m);
+        n /= Math.pow(10, m); 
 
         //Se muestra el resultado
         System.out.println("El nuevo valor de n es: " + n);
