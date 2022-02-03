@@ -28,7 +28,16 @@ public class Basico43 {
             for (int i = numeroMenor; i <= numeroMayor; i++) {
                 System.out.print(i + " ");
             }
-            //otra forma sería: 
+            /*otra forma sería: 
+            if (numero1 > numero2) {
+                int auxiliar = numero2 //Sirve para guardar el valor de 2 y no perderlo
+                numero2 = numero1;
+                numero1 = auxiliar;
+                for(int i = numero1 ; i < numero2 ; i++) {
+                    System.out.println(i);
+                }
+            }
+            */
         }
     }
 }
