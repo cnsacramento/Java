@@ -21,7 +21,7 @@ public class Basico26 {
         if ( caracter < 'a' ) {
             System.out.println(caracter + " es una mayúscula");
         }else {
-            System.out.println(caracter + " es una minúscula");
+            System.out.println(caracter + " no es una mayúcula");
         }
     }
 }
