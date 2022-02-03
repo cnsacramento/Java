@@ -27,7 +27,6 @@ public class Basico23 {
         //Se muestran lso reamur y kelven
         System.out.println(centigrados + " grados centígrados son: " + reamur + " grados reamur.");
         System.out.println(centigrados + " grados centígrados son: " + kelvin + " grados kelvin.");
-        System.out.println();
-        System.out.printf("\n%.2f ºC equivalen a %.2f ºR y a %.2f ºK \n", centigrados, reamur, kelvin);
+        
     }
 }
