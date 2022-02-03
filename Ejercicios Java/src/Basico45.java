@@ -34,7 +34,7 @@ public class Basico45 {
         }
 
         System.out.println("Los múltiplos de N hasta M son: ");
-        for (int i = 0; i < m; i++) { 
+        for (int i = 0; i <= m; i++) { 
             System.out.println(n + " * " + i + " = " + i*n); //Va múltiplicando N por i hasta que llega a M
         }
     }
