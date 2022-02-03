@@ -72,10 +72,11 @@ public class Basico46 {
                     System.out.println("\nSi desea terminar pulse \"n\" y para continuar \"s\" ");
                     continuar = sc.nextLine().toLowerCase(); //Aunque se introduzca en mayúsculas se convierte a minúsculas
                     while(!continuar.equals("n") && !continuar.equals("s")){ //En caso de que no se introduzca ni "n" ni "s" salta un error
-                        System.out.println("Error!!!! (Debe responder \"n\" o \"s\"");
+                        System.out.println("Error!!!! (Debe responder \"n\" o \"s\")");
                         continuar = sc.nextLine().toLowerCase();
                     }
                 } while(!continuar.equals("n")); //Permanece en bucle hasta que se pulse "n"
+                //Lo que hace el equals es comparar cadenas de texto de lo contrario compararía la dirección en memoria
                 break;
         }
         
