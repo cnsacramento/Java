@@ -35,9 +35,14 @@ public class Basico46 {
                     System.out.println("¿Qué número quieres saber si es positivo o negativo?");
                     numero = sc.nextInt();
                     if (numero < 0) { //Comprueba que sea un número negativo
-                        System.out.println(numero + " es un número negativo");
+                        System.out.print(numero + " es un número negativo");
                     }else { //Al no ser negativo tiene que ser positivo
-                        System.out.println(numero + " es un número positivo");
+                        System.out.print(numero + " es un número positivo");
+                    }
+                    if (numero % 2 == 0) {
+                        System.out.println("y es par");
+                    }else {
+                        System.out.println(" y no es par");
                     }
                     //Se pregunta si se desea salir
                     System.out.println("\nSi desea terminar pulse 0. Para continuar cualquier número");
@@ -49,9 +54,14 @@ public class Basico46 {
                     System.out.println("¿Qué número quieres saber si es positivo o negativo?");
                     numero = sc.nextInt();
                     if (numero < 0) { //Comprueba que sea un número negativo
-                        System.out.println(numero + " es un número negativo");
+                        System.out.print(numero + " es un número negativo");
                     }else { //Al no ser negativo tiene que ser positivo
-                        System.out.println(numero + " es un número positivo");
+                        System.out.print(numero + " es un número positivo");
+                    }
+                    if (numero % 2 == 0) { //Halla si es par
+                        System.out.print(" y es par");
+                    }else {
+                        System.out.print(" y no es par");
                     }
                     //Se pregunta si se desea salir
                     System.out.println("\nSi desea terminar pulse 0. Para continuar cualquier número");
@@ -64,9 +74,14 @@ public class Basico46 {
                     System.out.println("¿Qué número quieres saber si es positivo o negativo?");
                     numero = sc.nextInt();sc.nextLine(); //Se utiliza el nextLine para limpiar el buffer
                     if (numero < 0) { //Comprueba que sea un número negativo
-                        System.out.println(numero + " es un número negativo");
+                        System.out.print(numero + " es un número negativo");
                     }else { //Al no ser negativo tiene que ser positivo
-                        System.out.println(numero + " es un número positivo");
+                        System.out.print(numero + " es un número positivo");
+                    }
+                    if (numero % 2 == 0) {
+                        System.out.println(" y es par");
+                    }else {
+                        System.out.println(" y no es par");
                     }
                     //Se pregunta si se desea salir
                     System.out.println("\nSi desea terminar pulse \"n\" y para continuar \"s\" ");
