@@ -41,9 +41,10 @@ public class Basico48 {
                 System.out.println("Ahora el valor de A es: " + a + " y el valor de B: " + b);
                 break;
             case 2: System.out.println("Versión sin auxiliar:");
-                a = (a + b) - a; //Sí se suman ambos números se les resta el valor actual se obtiene el valor del contrario
-                b = (a+b) -b;
-                System.out.println("Ahora el valor de A es: " + a + " y el valor d B: " + b);
+                a = a + b;  //Guardamos el valor de a y b juntos con las suma
+                b = a - b; //Obtenemos el valor de a en b
+                a = a - b; //Obtenemos el valor de b en a. Restando el valor actual de "B=a" al valor de A 
+                System.out.println("Ahora el valor de A es: " + a + " y el valor de B: " + b);
                 break;
         }
     }
