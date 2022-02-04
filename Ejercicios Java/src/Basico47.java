@@ -24,13 +24,13 @@ public class Basico47 {
             System.out.println("¿Cuántas millas quieres pasar a km?");
             millas = sc.nextDouble();
             millasAkm = millas * 1.6093; //1 milla son 1.6093 Km
-            System.out.printf(millas + " millas = %.2f km", millasAkm); 
+            System.out.printf(millas + " millas = %.2f km \n", millasAkm); 
+            System.out.println("hola");
             /*
             printf modifica el output. % = Indica que se va a poner un valor.
             .2f = Indica que se va a imprimir sólo dos decimales y f = que es tipo double o f
             %n = Indica un salto de linea
             */
-
             System.out.println("\nSi no desea hacer más conversiones pulse \"0\". De lo contrario pulse cualquier número");
             terminar = sc.nextInt();
         }
