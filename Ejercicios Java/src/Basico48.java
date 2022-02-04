@@ -19,9 +19,6 @@ public class Basico48 {
         int a, b, version = -1;
 
         //Se solicitan las variables
-        while (version < 0 && version > 2){
-
-        }
         System.out.println("=================================");
         System.out.println("|| INTERCAMBIADOR DE VARIABLES ||");
         System.out.println("=================================");
@@ -31,9 +28,23 @@ public class Basico48 {
         b = sc.nextInt();
         System.out.println("¿Qué versión deseas realizar?\n 1. Con auxiliar\n 2.Sin auxiliar");
         version = sc.nextInt();
-
-
-
-
+        while (version != 1 && version != 2){ //En caso de que no elija una versión correcta entra al búcle para corregirlo
+            System.out.println("ERROR!!!! (Debe seleccionar \"1\" o \"2\" )");
+            System.out.printf("Version: ");
+            version = sc.nextInt();
+        }
+        switch (version) {
+            case 1: System.out.println("Versión con auxiliar: ");
+                int auxiliar = a;
+                a = b;
+                b = auxiliar;
+                System.out.println("Ahora el valor de A es: " + a + " y el valor de B: " + b);
+                break;
+            case 2: System.out.println("Versión sin auxiliar:");
+                a = (a + b) - a; //Sí se suman ambos números se les resta el valor actual se obtiene el valor del contrario
+                b = (a+b) -b;
+                System.out.println("Ahora el valor de A es: " + a + " y el valor d B: " + b);
+                break;
+        }
     }
 }
