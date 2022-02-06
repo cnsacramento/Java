@@ -44,23 +44,23 @@ public class Basico54 {
 
         for (int i = 1; i < numeroA - 1; i++) { //Se calculan los divisores de A
             if (numeroA % i == 0) {
-                divisoresA += i; //Se almacenan los divisores de A
-            }
-        }
-        for (int i = 1; i < numeroA - 1; i++) { //Se calculan los divisores de B
-            if (numeroA % i == 0) {
-                divisoresB += i; //Se almacena los divisores de B
+                divisoresA += i; //Se almacenan la suma de los divisores de A
             }
         }
 
-        /*
-        Se comprueba que la suma de los divisores de A sean igual al número b
-        Y que los divisores de B sean igual al número A
-        */
-        if (divisoresA == numeroB && divisoresB == divisoresA) { 
-            System.out.println(numeroA + " y " + numeroB + " son números amigos.");
+        if (divisoresA == numeroB) { //Se comprueba que la suma de los divisores de A sean igual a B. De lo contrario no entra al segundo bucle
+            for (int i = 1; i < numeroB - 1; i++) { //Se calculan los divisores de B
+                if (numeroB % i == 0) {
+                    divisoresB += i; //Se almacena los divisores de B
+                }
+            }
+            if (divisoresB == numeroA) { //Comprueba que la suma de los divisores de B son iguales al número A
+                System.out.println(numeroA + " y " + numeroB + " son números amigos");
+            }else {
+                System.out.println(numeroA + " y " + numeroB + " no son números amigos");
+            }
         }else {
-            System.out.println(numeroA + " y " + numeroB + " no son números amigos.");
+            System.out.println(numeroA + " y " + numeroB + " no son números amigos");
         }
     }
 }
