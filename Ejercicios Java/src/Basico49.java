@@ -19,15 +19,12 @@ public class Basico49 {
         System.out.println("¿Cuál número quieres saber cuántas cifras tiene?");
         numero = sc.nextInt();
 
-        /*Genera un bucle que vaya dividiendo hasta que no pueda más
-        el número de veces divido es el número de cifras
-        */
-        int contadorCifras = 0;
-        while (numero != 0) {
-            numero = numero / 10;
-            contadorCifras++;
+        int contadorCifras = 0; //Almacena la cantidad de cifras
+        while (numero != 0) { //Efectua la misma operación hasta que sea 0
+            numero = numero / 10; //Se va dividiendo el número entre 10 
+            contadorCifras++; //Por cada iteración incrementa 1 la cantidad de cifras
         }
-
+        
         System.out.println("El número tiene: " + contadorCifras + " cifras.");
     }
 }
