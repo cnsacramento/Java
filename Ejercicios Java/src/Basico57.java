@@ -9,6 +9,7 @@ Posición que ocupa cada dígito
 Para pasar el número a decimal se multiplica cada dígito 
 binario por 2 elevado a la posición que ocupa.
  La suma de todos los productos es el equivalente en decimal.
+Sin array
 */
 /**
  * @author Christian Novo Sacramento
@@ -29,9 +30,10 @@ public class Basico57 {
         }
         System.out.println("Número cifras: " + contadorCifras);
         for (int i = contadorCifras; i > 0; i++) {
-            conversorDecimal += (copiaBinario / 10) * (int)Math.pow(2, contadorCifras);
+            conversorDecimal += (copiaBinario / 10) * (int)Math.pow(2, contadorCifras-1);
         }
 
+        
         System.out.println("El número en decimal es: " + conversorDecimal);
     }
 }
