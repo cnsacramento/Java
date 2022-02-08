@@ -14,30 +14,36 @@ Por ejemplo, si N es 3, la ‘a’ se transformaría en ‘d’, la ‘b’ en �
  */
 public class Basico59 {
 
-    public static String cifrarTexto (String texto, int posiciones) {
-        String alfabeto = "abcdefghijklmnopqrstuvwxyz"; //Almacena el alfabeto para encriptar
+    public static String cifrarTexto(String texto, int posiciones) {
+        String alfabeto = "abcdefghijklmnopqrstuvwxyz"; // Almacena el alfabeto para encriptar
         String textoCifrado = "";
         int posicionLetra = 0;
         char letra;
-        for (int i = 0; i < texto.length(); i++) { //Bucle que recorre el texto e intercambia letras
-            if (texto.charAt(i) ) {
-
-            }
-            letra = texto.charAt(i); //Almacena el valor por orden de la letra del texto
-            for (int j = 0; j < alfabeto.length(); j++) { //Recorre el alfabeto para hallar la posición de la letra
-                if (alfabeto.charAt(j) == letra) {
-                    posicionLetra = j; //Obtiene la posición de la letra en el alfabeto
+        for (int i = 0; i < texto.length(); i++) { // Bucle que recorre el texto e intercambia letras
+            if (texto.charAt(i) < 'A' || texto.charAt(i) > 'z') { //En caso de que no sea un carácter distinto a una letra lo sustituye
+                textoCifrado += ""; //Sustituir por lo que se quiera modificar. En este caso nada
+            } else { //Si el carácter es una letra se ejecuta lo siguiente
+                letra = texto.charAt(i); // Almacena el valor por orden de la letra del texto
+                for (int j = 0; j < alfabeto.length(); j++) { // Recorre el alfabeto para hallar la posición de la letra
+                    if (alfabeto.charAt(j) == letra) {
+                        posicionLetra = j; // Obtiene la posición de la letra en el alfabeto
+                    }
+                }
+                if (posicionLetra + posiciones > alfabeto.length()) { //En caso de que sobrepase la longitud del alfabeto empieza desde cero
+                    textoCifrado += alfabeto.charAt( (posicionLetra + posiciones) - alfabeto.length() );
+                }else { //En caso de que no sobrepase la longitud del alfabeto se hace el desplazamiento
+                    textoCifrado += alfabeto.charAt(posicionLetra + posiciones);
                 }
             }
-            textoCifrado += alfabeto.charAt(posicionLetra + posiciones);
         }
         return textoCifrado;
     }
+
     public static void main(String[] args) {
-        
+
         Scanner sc = new Scanner(System.in);
-        String texto = "";//Almacena el texto a cifrar
-        String textoCifrado = ""; //Almacena el texto cifrado
+        String texto = "";// Almacena el texto a cifrar
+        String textoCifrado = ""; // Almacena el texto cifrado
         int posiciones = 0;
 
         System.out.println("¿Qué texto quieres cifrar?");
@@ -47,7 +53,6 @@ public class Basico59 {
 
         textoCifrado = cifrarTexto(texto, posiciones);
         System.out.println("El texto cifrado es\n" + textoCifrado);
-
 
     }
 }
